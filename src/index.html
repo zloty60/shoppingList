@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>MDB Webpack Starter</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- Main css file -->
+    <link rel="stylesheet" href="css/index.min.css" />
+    <!-- Custom styles -->
+    <style></style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container">
+        <p class="h5 text-light p-1">Shopping list</p>
+      </div>
+    </nav>
+    <div class="container app-wrapper mt-5"> 
+      <form id="category-form-js">
+        <div class="form-outline">
+          <input
+            type="text"
+            class="form-control"
+            id="category-name-input-js"
+            required
+            placeholder="wpisz nazwę kategorii"
+          />
+        </div>
+        <button class="btn btn-success mt-3" type="submit">Dodaj Kategorię</button>
+      </form>
+      <div id="notification-category-wrapper-js"  class="mt-3"></div>
+    </div>
+    <hr class="my-5" />
+    <div class="container app-wrapper mt-5">
+      <form id="product-form-js">
+        <div class="form-outline">
+          <input
+            type="text"
+            class="form-control"
+            id="product-name-input-js"
+            required
+            placeholder="wpisz nazwę produktu"
+          />
+        </div>
+        <div class="mt-4">
+         Wybierz kategorię: <select id="category-select-js">
+          </select>
+        </div>
+        <button class="btn btn-success mt-3" type="submit">Dodaj produkt</button>
+      </form>
+      <div id="notification-product-wrapper-js"  class="mt-3"></div>
+    </div>
+    <hr class="my-5" />
+    <div class="container app-wrapper">
+      <div class="mt-5">
+        <div id="products-list-wrapper-js">
+        </div>
+      </div> 
+    </div>
+    <div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edycja produktu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-mdb-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="product-edit-form-js">
+          <div class="form-outline">
+            <input
+              type="text"
+              class="form-control"
+              id="product-edit-name-input-js"
+              required
+              placeholder="wpisz nazwę produktu"
+            />
+          </div>
+          <div class="mt-4">
+           Wybierz kategorię: <select id="category-select-edit-js">
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" id="save-edit-btn-js" data-mdb-dismiss="modal" >Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+  <!-- Main js file -->
+  <script type="text/javascript" src="js/index.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+
+</html>
